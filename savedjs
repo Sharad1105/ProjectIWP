@@ -1,0 +1,56 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('.content, .content third-page, .content fourth-page, .content fifth-page, .contact');
+    
+    function handleScroll() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            console.log('Section:', section, 'Rect Top:', rect.top, 'Rect Bottom:', rect.bottom);
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                console.log('Visible:', section);
+                section.classList.add('visible');
+            } else {
+                section.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once to check the visibility on load
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const popupOverlay = document.getElementById('certificate-popup');
+    const certificateImg = document.getElementById('certificate-img');
+    const closeButton = document.querySelector('.close-button');
+
+    // Function to show the popup
+    function showPopup(imageSrc) {
+        certificateImg.src = imageSrc;
+        popupOverlay.style.display = 'flex'; // Display the popup overlay
+    }
+
+    // Function to hide the popup
+    function hidePopup() {
+        popupOverlay.style.display = 'none';
+        certificateImg.src = ''; // Clear the image source
+    }
+
+    // Event listener for clicking on a certificate
+    document.querySelectorAll('.certificate').forEach(item => {
+        item.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default action (important if it's a link)
+            const imageSrc = this.getAttribute('data-cert'); // Get the image source from the data-cert attribute
+            showPopup(imageSrc);
+        });
+    });
+
+    // Event listener for closing the popup
+    closeButton.addEventListener('click', hidePopup);
+
+    // Close the popup if clicking outside of the content
+    popupOverlay.addEventListener('click', function (event) {
+        if (event.target === popupOverlay) {
+            hidePopup();
+        }
+    });
+});
+

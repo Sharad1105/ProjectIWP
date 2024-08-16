@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section (First Page) -->
+    <div class="hero">
+        <video class="background-video" autoplay muted loop>
+            <source src="Animatedbg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <h1>Hello, I am Sharad</h1>
+            <p>Student, Developer, and Friendly Specimen</p>
+            <a href="#bio-section" class="cta-button">Discover More</a>
+        </div>
+    </div>
+
+    <!-- Content Section (Second Page) -->
+    <div class="content" id="bio-section">
+        <!-- Bio-left section placed within the content but outside the central box -->
+        <div class="bio-left">
+            <p><strong>NAME:</strong> Sharad Binoy Nair</p>
+            <p><strong>SCHOOL:</strong> Vellore Institute of Technology, Bhopal</p>
+            <p><strong>AGE:</strong> 20 Years</p>
+            <p><strong>HOMETOWN:</strong> Ahmedabad, Gujarat</p>
+        </div>
+        <div class="bio-section">
+            <div class="bio-right">
+                <p>I am Sharad B. Nair, a B.Tech student at VIT Bhopal University,<br>
+                majoring in Computer Science and Engineering. With a strong foundation<br>
+                in software development, I am proficient in languages like C++, Python,<br>
+                Java, HTML, and CSS. My journey in computer science began in high<br>
+                school, and since then, I have developed a passion for leveraging<br>
+                technology to drive innovation and improve user experiences.</p>
+
+                <p>Outside of academics, I have worked on various projects, including<br>
+                a financial markets investment platform and a web scraper project,<br>
+                where I enhanced system efficiency and led top-ranked teams. I have<br>
+                also gained valuable industry experience through internships, further<br>
+                refining my skills in software engineering and data science.</p>
+
+                <p>In my free time, I enjoy participating in tech challenges, learning<br>
+                new programming frameworks, and staying involved in campus activities.<br>
+                I am always eager to explore new opportunities that allow me to apply<br>
+                my skills and contribute to meaningful projects.</p>
+
+                <a href="SharadResume.pdf" class="download-resume-button">Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section (Third Page) -->
+    <div class="content third-page" id="education-section">
+        <h2 class="education-title">My Education</h2>
+        <div class="education-container">
+            <div class="education-entry">
+                <h3>Vellore Institute of Technology , Bhopal</h3>
+                <span>Bachelors Degree | 2022-Present</span>
+                <p><strong>Major:</strong> Computer Science</p>
+                
+                <p><strong>Relevant coursework:</strong> Database Management(DBMS), Machine Learning , Operating Systems , Probability & Random Variables,<br> Software Engineering, Computer Graphics, Computation Structures,Mathematics for Computer Science, Fundamentals of Python,<br> Introduction to Algorithms, Differential Equations, Real Analysis, Linear Algebra</p>
+            </div>
+            <div class="education-entry">
+                <h3>Finalatics Pvt LTD</h3>
+                <span>2022-2023</span>
+                <p><strong>Awards:</strong>Letter of Recommendation</p>
+                <p>Performed Deep research on finance market and provided 25% return on highly volatile market</p>
+            </div>
+            <div class="education-entry">
+                <h3>Nelsons High School</h>
+                <span>High School Degree | 2020-2022</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates Section (Second-to-Last Page) -->
+    <div class="content fourth-page" id="certificates-section">
+        <h2 class="certificates-title">Certificates</h2>
+        <div class="certificates-container">
+            <!-- Certificate Previews -->
+            <div class="certificate" data-cert="BitsBytes-1.png">
+                <div class="certificate-box">
+                    <p class="certificate-name">Bits and Bytes</p>
+                    <p class="certificate-description">of Computer Networking</p>
+                </div>
+            </div>
+            <div class="certificate" data-cert="FinalaticsLOR-1.png">
+                <div class="certificate-box">
+                    <p class="certificate-name">Letter of Recommendation</p>
+                    <p class="certificate-description">for Business Analyst</p>
+                </div>
+            </div>
+            <div class="certificate" data-cert="FinalaticsCerti-1.png">
+                <div class="certificate-box">
+                    <p class="certificate-name">Certificate</p>
+                    <p class="certificate-description">for Financial Markets</p>
+                </div>
+            </div>
+            <div class="certificate" data-cert="CloudComputing-1.png">
+                <div class="certificate-box">
+                    <p class="certificate-name">NPTEL</p>
+                    <p class="certificate-description">Cloud Computing Silver Medal</p>
+                </div>
+            </div>
+            <div class="certificate" data-cert="FintechFinalist.jpg">
+                <div class="certificate-box">
+                    <p class="certificate-name">FinTech</p>
+                    <p class="certificate-description">Fintech Olympiad Finalists</p>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+    <!-- Certificate Popup Structure -->
+    <div id="certificate-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <img id="certificate-img" src="" alt="Certificate" class="certificate-image">
+        </div>
+    </div>
+
+    <!-- Gallery Section (Last Page) -->
+    <div class="content fifth-page" id="gallery-section">
+        <!-- Background video -->
+        <video class="background-video" autoplay muted loop>
+            <source src="AIRBG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="gallery-title">
+            <h1>Gallery</h1>
+        </div>
+
+        <!-- Collage Section -->
+        <div class="collage-container">
+            <div class="collage-item video">
+                <video src="Air1.mp4" autoplay muted loop></video>
+            </div>
+            <div class="collage-item video">
+                <video src="Air2.mp4" autoplay muted loop></video>
+            </div>
+            <div class="collage-item">
+                <img src="Me.jpg" alt="Me">
+            </div>
+            <div class="collage-item">
+                <img src="Me2.jpg" alt="Me2">
+            </div>
+            <div class="collage-item">
+                <img src="mom.jpg" alt="Mom">
+            </div>
+            <div class="collage-item">
+                <img src="nikhil.jpg" alt="Nikhil">
+            </div>
+            <div class="collage-item">
+                <img src="fam.jpg" alt="Family">
+            </div>
+            <div class="collage-item">
+                <img src="frnds.jpg" alt="Friends">
+            </div>
+            <div class="collage-item">
+                <img src="Dad.jpg" alt="DAD">
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-div" class="contact">
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="send_mail.php" method="post">
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <div class="input-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

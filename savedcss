@@ -1,0 +1,533 @@
+/* General body style */
+body {
+    font-family: 'LibreBaskerville', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: opacity 1s ease-in-out;
+    overflow-x: hidden;
+}
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Color of the scrollbar track */
+    border-radius: 6px; /* Rounded corners of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #333; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+    border: 3px solid #f0f0f0; /* Space around the thumb to make it look inset */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Background video */
+.background-video {
+    background-size: cover; /* Cover the entire slide */
+    background-position: center;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hero text container */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width: 90%;
+    text-align: left;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Header (h1) styles */
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Paragraph (p) styles */
+p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Content section (Page 2) */
+.content {
+    padding: 40px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.95) translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Bio section */
+.bio-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #fff;
+    box-shadow: 0 100px 200px rgba(0, 0, 0, 0.826);
+    border-radius: 8px;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    background: none;
+}
+
+.bio-left {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    margin-right: 100px;
+}
+
+.bio-right p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* Download resume button */
+.download-resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-resume-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Third Page Education Section */
+.third-page {
+    background-color: #f0f0f0;
+    padding: 50px;
+    min-height: 100vh;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.95) translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.third-page.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.education-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.education-container {
+    position: relative;
+    margin-top: 80px;
+    padding-left: 60px;
+}
+
+.education-entry {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.education-entry::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+}
+
+.education-entry::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    height: 2px;
+    width: 40px;
+    background-color: #333;
+}
+
+.education-entry:first-child::before {
+    top: 50%;
+}
+
+.education-entry:last-child::before {
+    height: 50%;
+}
+
+/* Connecting Line */
+.education-container::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #333;
+}
+
+/* Fourth Page Certificates Section */
+.fourth-page {
+    background-image: url('certibg.jpg'); /* Replace with your certificates background image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    min-height: 100vh;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fourth-page.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.certificates-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.certificate-instruction {
+    font-size: 1.5rem;
+    margin-top: 60px;
+    color: white;
+    text-align: center;
+}
+
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.certificate-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-box h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    word-wrap: break-word;
+}
+
+.certificate-box p {
+    font-size: 1rem;
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.certificate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+/* Popup overlay background */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the popup is above all other content */
+}
+
+/* Popup content box */
+/* Popup overlay background */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top of the screen */
+    z-index: 1000; /* Ensures the popup is above all other content */
+    padding-top: 50px; /* Adjust padding to move the popup down slightly */
+}
+
+/* Popup content box */
+.popup-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Ensure the image is not too big */
+    max-height: 80%; /* Ensure the image is not too big */
+    text-align: center;
+}
+
+/* Certificate image */
+.popup-content img {
+    max-width: 100%; /* Scale the image down if needed */
+    max-height: 100%; /* Scale the image down if needed */
+    border-radius: 5px;
+}
+
+/* Close button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+
+/* Fifth Page Gallery Section */
+.fifth-page {
+    background-color: #f0f0f0;
+    padding: 50px;
+    min-height: 100vh;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fifth-page.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-title {
+    position: absolute;
+    top: -1000px; /* You can adjust the exact positioning if needed */
+    left: 20px; /* You can adjust the exact positioning if needed */
+    font-size: 4000rem; /* Double the original size */
+    font-weight: bold;
+    margin: 0;
+}
+
+.collage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+.collage-item {
+    position: relative;
+    flex: 1 1 calc(33.333% - 40px); /* Adjusted to allow for better scaling */
+    max-width: calc(33.333% - 40px); /* Adjusted to allow for better scaling */
+    height: auto; /* Changed from fixed height to auto to maintain aspect ratio */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage-item img,
+.collage-item video {
+    width: 100%;
+    height: auto; /* Ensure the height is auto to maintain the aspect ratio */
+    object-fit: cover;
+    display: block;
+}
+
+.collage-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Full-Screen Background Video for Last Page */
+.fifth-page .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8; /* Adjust the opacity if needed */
+}
+
+/* Content on the fifth page should be on top of the video */
+.fifth-page .gallery-title
+,
+
+.fifth-page .collage-container {
+    position: relative;
+    z-index: 1;
+}
+.fifth-page .background-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: -1;
+}
+/* Contact Section Styles */
+
+/* Contact Section Styles */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px; /* Padding to prevent overflow */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%; /* Ensure the form takes full width of container */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-group button:hover {
+    background-color: #555;
+}
+
+/* Add transitions for the visibility and opacity */
+.content, .third-page, .fourth-page, .fifth-page, .contact {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s ease-in-out, visibility 3s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
